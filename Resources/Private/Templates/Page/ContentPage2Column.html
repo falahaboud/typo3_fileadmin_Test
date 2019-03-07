@@ -1,0 +1,27 @@
+<f:layout name="globalFrame" />
+
+<f:section name="content">    
+    <section id="contentPage"> 
+
+        <f:render partial="title" arguments="{seitenTitel: data.title}" />
+
+            <div class="row">  
+                
+                <div class="col m12 l6 contentBox">
+                    <div class="whiteBox"> 
+                        <f:cObject typoscriptObjectPath="lib.content" data="{column:0}" />
+                    </div>
+                </div>
+                
+                <div class="col m12 l6 contentBox">
+                    <div class="whiteBox"> 
+                        <f:cObject typoscriptObjectPath="lib.content" data="{column:1}" />
+                    </div>
+                </div>
+                
+            </div>
+
+    </section>
+</f:section>
+
+

@@ -1,0 +1,21 @@
+	<li class="languageMenu">
+            <f:for each="{translations}" as="translation">
+                <f:if condition="{translation.available} == 1">
+                    <f:if condition="{translation.active} == 0">
+                        <f:then>
+                            <f:link.page pageUid="{translation.data.uid}"
+                                         additionalParams="{L: translation.languageUid}"
+                                         addQueryString="true" addQueryStringMethod="get"
+                                         argumentsToBeExcludedFromQueryString="{0:'id', 1: 'cHash', 2: 'L', 3:'no_cache'}">
+                                <f:translate key="LLL:fileadmin/Resources/Private/Language/locallang.xlf:language.{translation.languageUid}" />
+                            </f:link.page>
+                        </f:then>
+                        <f:else>
+                            <span>
+                                <f:translate key="LLL:fileadmin/Resources/Private/Language/locallang.xlf:language.{translation.languageUid}" />
+                            </span>
+                        </f:else>
+                    </f:if>
+                </f:if>
+            </f:for>
+	</li>

@@ -1,0 +1,10 @@
+<f:if condition="{settings.debug} == 1">
+    <f:debug>{data}</f:debug>
+    <f:debug>{_all}</f:debug>
+</f:if>
+
+<main>
+    <f:render partial='menuBar' arguments="{userData: userData, languageMenu: languageMenu, navigation:navigation, homeLink: homeLink}" />
+    <f:render section='content' />
+</main>
+<f:render partial='Footer' arguments="{impressumLink:impressumLink}"/>

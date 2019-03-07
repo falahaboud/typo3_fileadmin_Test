@@ -1,0 +1,20 @@
+<f:if condition="{trips}">
+    <div class="container">
+            <div class="row"> 
+                <f:for each="{trips}" as="trip">
+                    <div class="col l3 m6 s12 center-align teaser">
+                            <a href="{trip.link}">        
+                                    <div>
+                                            <h2>{trip.title}</h2>
+                                            <f:if condition="{trip.files.0}">
+                                                <f:image image="{trip.files.0}" width="520" height="345c" alt="" />
+                                            </f:if>
+                                            <p><f:format.crop maxCharacters="100">{trip.data.description}</f:format.crop></p>
+                                    </div>
+                            </a>
+                    </div>
+                </f:for>
+
+            </div>
+    </div>
+</f:if>

@@ -1,0 +1,15 @@
+<f:layout name="globalFrame" />
+
+<f:section name="content">    
+    <section id="contentPage"> 
+
+        <f:render partial="title" arguments="{seitenTitel: data.title}" />
+
+        <div class="container">               
+                <f:cObject typoscriptObjectPath="lib.content" data="{column:0}" />                        
+        </div>
+
+    </section>
+</f:section>
+
+

@@ -1,0 +1,12 @@
+        <f:security.ifAuthenticated>
+            <li>
+                    <div class="user-view">
+                            <div class="background"></div>
+                            <f:if condition="{userData.0.images.0}">
+                                <f:image class="circle" image="{userData.0.images.0}" width="171" height="171" />
+                            </f:if>
+                            <span class="white-text name">{userData.0.data.first_name} {userData.0.data.last_name}</span>
+                            <span class="white-text email">{userData.0.data.email}</span>
+                    </div>
+            </li>
+        </f:security.ifAuthenticated>
